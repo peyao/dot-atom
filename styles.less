@@ -1,0 +1,60 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+
+// peyao/dot-atom
+// --------------
+// customized for theme: native-ui (https://atom.io/themes/native-ui)
+atom-workspace {
+  // Change "Project Find Results" font-size to something larger (default: 0.8rem)
+  .path.list-nested-item {
+    .search-result.list-item {
+      font-size: 1.4rem;
+    }
+  }
+
+  // hide scrollbars (they look ugly on native-ui)
+  .tree-view-resizer, atom-text-editor /deep/ ::-webkit-scrollbar { 
+    width: initial; 
+    height: initial;
+    &-track  { background-color: initial; }
+    &-corner { background-color: initial; }
+    &-thumb  { background-color: initial; }
+  }
+}
+atom-text-editor {
+  // gutter border width increase (too thin after removing scrollbars)
+  .line-number {
+    border-left-width: 4px !important;
+  }
+}

@@ -1,0 +1,16 @@
+# default ignores (by atom itself)
+blob-store
+compile-cache
+dev
+storage
+.apm
+.node-gyp
+.npm
+
+# ignore all
+*
+
+# do not ignore these files
+!.gitignore
+!styles.less
+!keymap.cson
